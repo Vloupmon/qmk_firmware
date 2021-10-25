@@ -24,7 +24,6 @@ enum {
     TD_F13_F14,
     TD_GRV_F15,
     TD_DEL_F16,
-    TD_LCTL_ESC
 };
 
 qk_tap_dance_action_t tap_dance_actions[] = {
@@ -43,7 +42,6 @@ qk_tap_dance_action_t tap_dance_actions[] = {
     [TD_F13_F14] = ACTION_TAP_DANCE_DOUBLE(KC_F13, KC_F14),
     [TD_GRV_F15] = ACTION_TAP_DANCE_DOUBLE(KC_GRV, KC_F15),
     [TD_DEL_F16] = ACTION_TAP_DANCE_DOUBLE(KC_DEL, KC_F16),
-    [TD_LCTL_ESC] = ACTION_TAP_DANCE_DOUBLE(KC_LCTL, KC_ESC)
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -52,7 +50,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         TD(TD_6_F6), TD(TD_7_F7), TD(TD_8_F8), TD(TD_9_F9), TD(TD_0_F10),
         TD(TD_MINS_F11), TD(TD_EQL_F12), KC_BSPC, TD(TD_GRV_F15), KC_TAB, KC_Q,
         KC_W, KC_E, KC_R, KC_T, KC_Y, KC_U, KC_I, KC_O, KC_P, KC_LBRC, KC_RBRC,
-        KC_BSLS, TD(TD_DEL_F16), TD(TD_LCTL_ESC), KC_A, KC_S, KC_D, KC_F, KC_G,
+        KC_BSLS, TD(TD_DEL_F16), LCTL_T(KC_ESC), KC_A, KC_S, KC_D, KC_F, KC_G,
         KC_H, KC_J, KC_K, KC_L, KC_SCLN, KC_QUOT, KC_ENT, KC_LSFT, KC_Z, KC_X,
         KC_C, KC_V, KC_B, KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_RSFT, KC_UP,
         TD(TD_F13_F14), KC_LGUI, KC_LALT, KC_SPC, KC_RALT, KC_RCTL, MO(1),
